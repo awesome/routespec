@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'optparse'
+
+$:.unshift File.join(File.dirname(__FILE__), '..', 'lib')
+require 'routespec'
+
+module RoutespecOpt 
+  def self.command
+    OptionParser.new do |opts|
+      opts.banner = "Routespec #{Routespec::VERSION}"
+      opts.on("-i", "--init", "setup routespec in ./spec") do |x|
+        if Routespec::Dyr.init
+          puts "made spec/routespec"
+        else
+          puts "spec/routespec already exists"
+        end
+        return
+      end    
+
+      opts.on("-h", "--help", "Show this message") do
+        puts opts
+        return
+      end
+    end.parse!
+  end
+end
+
+RoutespecOpt.command

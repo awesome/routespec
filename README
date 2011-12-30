@@ -1,0 +1,76 @@
+= routespec
+
+http://github.com/awesome/routespec
+
+== DESCRIPTION:
+
+RouteSpec automates test writing based on routes exposed in config/routes.rb.
+A complimentary gem for Rails test-writers using RSpec.
+
+== FEATURES/PROBLEMS:
+
+Features
+* each test will use "get" as the default http_verb
+
+To Do
+* raise if there is not a controller matching the route 
+* raise if there is not a action for the route
+
+== SYNOPSIS:
+
+  FIX (code sample of usage)
+
+== REQUIREMENTS:
+
+* Rails 3.1.1
+* RSpec
+* YAML
+* FileUtils
+* Ostruct
+* Erb
+
+== INSTALL:
+
+to install routespec from local gem: from YOUR_DIR with the routespec gem, e.g. YOUR_DIR/routespec-0.0.1.gem
+$ gem install routespec
+
+=== Command Line
+
+1. from your Rails.root dir; this will create the dir "spec/routespec" with a default_spec.erb template
+$ routespec init 
+
+2. this will run "$ rake routes" and put the output into "spec/routespec/support/routes.txt"
+$ rake routespec:routes 
+
+3. this will take "spec/routespec/support/routes.txt" and create "spec/routespec/support/routes.yml"
+$ rake routespec:text_to_yaml
+
+4. this will take "spec/routespec/support/routes.yml" and create tests in "spec/routespec/requests"
+$ rake routespec:build_tests
+
+=== Rails 3.1.1 
+
+add to Gemfile:
+gem "routespec"
+
+== DEVELOPERS:
+
+After checking out the source, run:
+
+FIX
+[coming soon]
+
+This task will install any missing dependencies, run the tests/specs,
+and generate the RDoc.
+
+== LICENSE:
+
+(The MIT License)
+
+Copyright (c) 2011 SoAwesomeMan, Windermere Solutions LLC
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

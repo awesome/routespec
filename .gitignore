@@ -1,0 +1,3 @@
+test/rails311/log/*.log
+test/rails311/tmp/
+.DS_Store

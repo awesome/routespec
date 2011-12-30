@@ -1,0 +1,12 @@
+                                  dynamic_controller        /:controller/render_event_response(.:format)                                        {:action=>"render_event_response"}
+                                       no_controller        /render_event_response(.:format)                                                    {:action=>"render_event_response"}
+                                     info_panel_edit GET    /info_panel/edit(.:format)                                                          {:controller=>"info_panel", :action=>"edit"}
+                                                     POST   /errors(.:format)                                                                   {:action=>"create", :controller=>"errors"}
+                                                     PUT    /errors/:id(.:format)                                                               {:action=>"update", :controller=>"errors"}
+                                                     DELETE /errors/:id(.:format)                                                               {:action=>"destroy", :controller=>"errors"}
+                                                            /index.cfm(.:format)                                                                {:controller=>"legacy", :action=>"index"}
+                                                            /listingid=:id(.:format)                                                            {:id=>/[0-9]+/, :controller=>"legacy", :action=>"listingid"}
+                                                            /mls/:id(.:format)                                                                  {:controller=>"agents_and_offices/listings", :action=>"mls"}
+                             agent_listing_enquiries POST   /agents/:agent_id/listings/:listing_id/enquiries(.:format)                          {:action=>"create", :controller=>"agents_and_offices/enquiries"}
+                           new_agent_listing_enquiry GET    /agents/:agent_id/listings/:listing_id/enquiries/new(.:format)                      {:action=>"new", :controller=>"agents_and_offices/enquiries"}
+                         agent_listing_gallery_photo GET    /agents/:agent_id/listings/:listing_id/galleries/:gallery_id/photos/:id(.:format)   {:action=>"show", :controller=>"agents_and_offices/photos"}

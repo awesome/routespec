@@ -1,0 +1,21 @@
+    sports GET    /sports(.:format)          {:action=>"index", :controller=>"sports"}
+           POST   /sports(.:format)          {:action=>"create", :controller=>"sports"}
+ new_sport GET    /sports/new(.:format)      {:action=>"new", :controller=>"sports"}
+edit_sport GET    /sports/:id/edit(.:format) {:action=>"edit", :controller=>"sports"}
+     sport GET    /sports/:id(.:format)      {:action=>"show", :controller=>"sports"}
+           PUT    /sports/:id(.:format)      {:action=>"update", :controller=>"sports"}
+           DELETE /sports/:id(.:format)      {:action=>"destroy", :controller=>"sports"}
+     chips GET    /chips(.:format)           {:action=>"index", :controller=>"chips"}
+           POST   /chips(.:format)           {:action=>"create", :controller=>"chips"}
+  new_chip GET    /chips/new(.:format)       {:action=>"new", :controller=>"chips"}
+ edit_chip GET    /chips/:id/edit(.:format)  {:action=>"edit", :controller=>"chips"}
+      chip GET    /chips/:id(.:format)       {:action=>"show", :controller=>"chips"}
+           PUT    /chips/:id(.:format)       {:action=>"update", :controller=>"chips"}
+           DELETE /chips/:id(.:format)       {:action=>"destroy", :controller=>"chips"}
+     beers GET    /beers(.:format)           {:action=>"index", :controller=>"beers"}
+           POST   /beers(.:format)           {:action=>"create", :controller=>"beers"}
+  new_beer GET    /beers/new(.:format)       {:action=>"new", :controller=>"beers"}
+ edit_beer GET    /beers/:id/edit(.:format)  {:action=>"edit", :controller=>"beers"}
+      beer GET    /beers/:id(.:format)       {:action=>"show", :controller=>"beers"}
+           PUT    /beers/:id(.:format)       {:action=>"update", :controller=>"beers"}
+           DELETE /beers/:id(.:format)       {:action=>"destroy", :controller=>"beers"}

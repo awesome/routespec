@@ -1,0 +1,24 @@
+require "spec_helper"
+
+#
+# routes
+<% @routes.each do |route| %> 
+#  <%= route.raw %>
+<% end %>
+#
+describe "<%= @name %> response status codes" do
+<% @routes.each do |route| %> 
+  describe "<%= route.http_verb %> <%= route.path %>" do
+    it "should have a response", :vcr do 
+      <% if route.vars %>
+      <% route.vars.each do |var| %>
+      <%= var %>
+      <% end %>
+      <% end %>
+      <%= route.http_verb.downcase %> <%= route.helper_path %>
+      response.status.should be(<%= route.status_code %>)
+    end
+  end
+
+<% end %>
+end

@@ -1,0 +1,13 @@
+require "spec_helper"
+
+#
+# some text
+#
+describe "<%= @name %>" do
+  describe "<%= @desc_1 %>" do
+    it "should have a <%= @desc_2 %>" do
+      response.status.should be(<%= @response %>)
+    end
+  end
+
+end

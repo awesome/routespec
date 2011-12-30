@@ -1,0 +1,322 @@
+---
+:sports:
+- :raw: sports GET /sports(.:format) {:action=>"index", :controller=>"sports"}
+  :helper: sports
+  :http_verb: GET
+  :path: /sports(.:format)
+  :action: index
+  :controller: sports
+  :symbols:
+  - format
+  :address:
+  - sports
+  :status_code: 200
+  :helper_path: sports_path(:format => format)
+  :vars:
+  - format = nil
+- :raw: POST /sports(.:format) {:action=>"create", :controller=>"sports"}
+  :helper: !!null 
+  :http_verb: POST
+  :path: /sports(.:format)
+  :action: create
+  :controller: sports
+  :symbols:
+  - format
+  :address:
+  - sports
+  :status_code: 201
+  :helper_path: ! '"/sports#{format ? "." : nil}#{format}"'
+  :vars:
+  - format = nil
+- :raw: new_sport GET /sports/new(.:format) {:action=>"new", :controller=>"sports"}
+  :helper: new_sport
+  :http_verb: GET
+  :path: /sports/new(.:format)
+  :action: new
+  :controller: sports
+  :symbols:
+  - format
+  :address:
+  - sports
+  :status_code: 200
+  :helper_path: new_sport_path(:format => format)
+  :vars:
+  - format = nil
+- :raw: edit_sport GET /sports/:id/edit(.:format) {:action=>"edit", :controller=>"sports"}
+  :helper: edit_sport
+  :http_verb: GET
+  :path: /sports/:id/edit(.:format)
+  :action: edit
+  :controller: sports
+  :symbols:
+  - id
+  - format
+  :address:
+  - sports
+  :status_code: 200
+  :helper_path: edit_sport_path(:id => id, :format => format)
+  :vars:
+  - id = "REPLACE"
+  - format = nil
+- :raw: sport GET /sports/:id(.:format) {:action=>"show", :controller=>"sports"}
+  :helper: sport
+  :http_verb: GET
+  :path: /sports/:id(.:format)
+  :action: show
+  :controller: sports
+  :symbols:
+  - id
+  - format
+  :address:
+  - sports
+  :status_code: 200
+  :helper_path: sport_path(:id => id, :format => format)
+  :vars:
+  - id = "REPLACE"
+  - format = nil
+- :raw: PUT /sports/:id(.:format) {:action=>"update", :controller=>"sports"}
+  :helper: !!null 
+  :http_verb: PUT
+  :path: /sports/:id(.:format)
+  :action: update
+  :controller: sports
+  :symbols:
+  - id
+  - format
+  :address:
+  - sports
+  :status_code: 200
+  :helper_path: ! '"/sports/#{id}#{format ? "." : nil}#{format}"'
+  :vars:
+  - id = "REPLACE"
+  - format = nil
+- :raw: DELETE /sports/:id(.:format) {:action=>"destroy", :controller=>"sports"}
+  :helper: !!null 
+  :http_verb: DELETE
+  :path: /sports/:id(.:format)
+  :action: destroy
+  :controller: sports
+  :symbols:
+  - id
+  - format
+  :address:
+  - sports
+  :status_code: 200
+  :helper_path: ! '"/sports/#{id}#{format ? "." : nil}#{format}"'
+  :vars:
+  - id = "REPLACE"
+  - format = nil
+:chips:
+- :raw: chips GET /chips(.:format) {:action=>"index", :controller=>"chips"}
+  :helper: chips
+  :http_verb: GET
+  :path: /chips(.:format)
+  :action: index
+  :controller: chips
+  :symbols:
+  - format
+  :address:
+  - chips
+  :status_code: 200
+  :helper_path: chips_path(:format => format)
+  :vars:
+  - format = nil
+- :raw: POST /chips(.:format) {:action=>"create", :controller=>"chips"}
+  :helper: !!null 
+  :http_verb: POST
+  :path: /chips(.:format)
+  :action: create
+  :controller: chips
+  :symbols:
+  - format
+  :address:
+  - chips
+  :status_code: 201
+  :helper_path: ! '"/chips#{format ? "." : nil}#{format}"'
+  :vars:
+  - format = nil
+- :raw: new_chip GET /chips/new(.:format) {:action=>"new", :controller=>"chips"}
+  :helper: new_chip
+  :http_verb: GET
+  :path: /chips/new(.:format)
+  :action: new
+  :controller: chips
+  :symbols:
+  - format
+  :address:
+  - chips
+  :status_code: 200
+  :helper_path: new_chip_path(:format => format)
+  :vars:
+  - format = nil
+- :raw: edit_chip GET /chips/:id/edit(.:format) {:action=>"edit", :controller=>"chips"}
+  :helper: edit_chip
+  :http_verb: GET
+  :path: /chips/:id/edit(.:format)
+  :action: edit
+  :controller: chips
+  :symbols:
+  - id
+  - format
+  :address:
+  - chips
+  :status_code: 200
+  :helper_path: edit_chip_path(:id => id, :format => format)
+  :vars:
+  - id = "REPLACE"
+  - format = nil
+- :raw: chip GET /chips/:id(.:format) {:action=>"show", :controller=>"chips"}
+  :helper: chip
+  :http_verb: GET
+  :path: /chips/:id(.:format)
+  :action: show
+  :controller: chips
+  :symbols:
+  - id
+  - format
+  :address:
+  - chips
+  :status_code: 200
+  :helper_path: chip_path(:id => id, :format => format)
+  :vars:
+  - id = "REPLACE"
+  - format = nil
+- :raw: PUT /chips/:id(.:format) {:action=>"update", :controller=>"chips"}
+  :helper: !!null 
+  :http_verb: PUT
+  :path: /chips/:id(.:format)
+  :action: update
+  :controller: chips
+  :symbols:
+  - id
+  - format
+  :address:
+  - chips
+  :status_code: 200
+  :helper_path: ! '"/chips/#{id}#{format ? "." : nil}#{format}"'
+  :vars:
+  - id = "REPLACE"
+  - format = nil
+- :raw: DELETE /chips/:id(.:format) {:action=>"destroy", :controller=>"chips"}
+  :helper: !!null 
+  :http_verb: DELETE
+  :path: /chips/:id(.:format)
+  :action: destroy
+  :controller: chips
+  :symbols:
+  - id
+  - format
+  :address:
+  - chips
+  :status_code: 200
+  :helper_path: ! '"/chips/#{id}#{format ? "." : nil}#{format}"'
+  :vars:
+  - id = "REPLACE"
+  - format = nil
+:beers:
+- :raw: beers GET /beers(.:format) {:action=>"index", :controller=>"beers"}
+  :helper: beers
+  :http_verb: GET
+  :path: /beers(.:format)
+  :action: index
+  :controller: beers
+  :symbols:
+  - format
+  :address:
+  - beers
+  :status_code: 200
+  :helper_path: beers_path(:format => format)
+  :vars:
+  - format = nil
+- :raw: POST /beers(.:format) {:action=>"create", :controller=>"beers"}
+  :helper: !!null 
+  :http_verb: POST
+  :path: /beers(.:format)
+  :action: create
+  :controller: beers
+  :symbols:
+  - format
+  :address:
+  - beers
+  :status_code: 201
+  :helper_path: ! '"/beers#{format ? "." : nil}#{format}"'
+  :vars:
+  - format = nil
+- :raw: new_beer GET /beers/new(.:format) {:action=>"new", :controller=>"beers"}
+  :helper: new_beer
+  :http_verb: GET
+  :path: /beers/new(.:format)
+  :action: new
+  :controller: beers
+  :symbols:
+  - format
+  :address:
+  - beers
+  :status_code: 200
+  :helper_path: new_beer_path(:format => format)
+  :vars:
+  - format = nil
+- :raw: edit_beer GET /beers/:id/edit(.:format) {:action=>"edit", :controller=>"beers"}
+  :helper: edit_beer
+  :http_verb: GET
+  :path: /beers/:id/edit(.:format)
+  :action: edit
+  :controller: beers
+  :symbols:
+  - id
+  - format
+  :address:
+  - beers
+  :status_code: 200
+  :helper_path: edit_beer_path(:id => id, :format => format)
+  :vars:
+  - id = "REPLACE"
+  - format = nil
+- :raw: beer GET /beers/:id(.:format) {:action=>"show", :controller=>"beers"}
+  :helper: beer
+  :http_verb: GET
+  :path: /beers/:id(.:format)
+  :action: show
+  :controller: beers
+  :symbols:
+  - id
+  - format
+  :address:
+  - beers
+  :status_code: 200
+  :helper_path: beer_path(:id => id, :format => format)
+  :vars:
+  - id = "REPLACE"
+  - format = nil
+- :raw: PUT /beers/:id(.:format) {:action=>"update", :controller=>"beers"}
+  :helper: !!null 
+  :http_verb: PUT
+  :path: /beers/:id(.:format)
+  :action: update
+  :controller: beers
+  :symbols:
+  - id
+  - format
+  :address:
+  - beers
+  :status_code: 200
+  :helper_path: ! '"/beers/#{id}#{format ? "." : nil}#{format}"'
+  :vars:
+  - id = "REPLACE"
+  - format = nil
+- :raw: DELETE /beers/:id(.:format) {:action=>"destroy", :controller=>"beers"}
+  :helper: !!null 
+  :http_verb: DELETE
+  :path: /beers/:id(.:format)
+  :action: destroy
+  :controller: beers
+  :symbols:
+  - id
+  - format
+  :address:
+  - beers
+  :status_code: 200
+  :helper_path: ! '"/beers/#{id}#{format ? "." : nil}#{format}"'
+  :vars:
+  - id = "REPLACE"
+  - format = nil
