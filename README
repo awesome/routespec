@@ -37,7 +37,7 @@ $ gem install routespec
 === Command Line
 
 1. from your Rails.root dir; this will create the dir "spec/routespec" with a default_spec.erb template
-$ routespec init 
+$ routespec --init 
 
 2. this will run "$ rake routes" and put the output into "spec/routespec/support/routes.txt"
 $ rake routespec:routes 
